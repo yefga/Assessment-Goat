@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		DF638C1B2B28722400A07E43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF638C1A2B28722400A07E43 /* AppDelegate.swift */; };
 		DF638C1D2B28722400A07E43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF638C1C2B28722400A07E43 /* SceneDelegate.swift */; };
-		DF638C1F2B28722400A07E43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF638C1E2B28722400A07E43 /* ViewController.swift */; };
+		DF638C1F2B28722400A07E43 /* WidgetBackgroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF638C1E2B28722400A07E43 /* WidgetBackgroundVC.swift */; };
 		DF638C222B28722400A07E43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF638C202B28722400A07E43 /* Main.storyboard */; };
 		DF638C252B28722400A07E43 /* Goat_Weather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF638C232B28722400A07E43 /* Goat_Weather.xcdatamodeld */; };
 		DF638C272B28722600A07E43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF638C262B28722600A07E43 /* Assets.xcassets */; };
 		DF638C2A2B28722600A07E43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF638C282B28722600A07E43 /* LaunchScreen.storyboard */; };
+		DF74EDD62B2B59B400414130 /* WidgetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EDD52B2B59B400414130 /* WidgetCollectionViewCell.swift */; };
+		DF74EDD82B2B5AC300414130 /* AnimatedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EDD72B2B5AC300414130 /* AnimatedCollectionViewLayout.swift */; };
+		DF9262722B287F3800879802 /* WidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF9262712B287F3800879802 /* WidgetView.xib */; };
+		DF9262742B287F4500879802 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9262732B287F4500879802 /* WidgetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DF638C172B28722400A07E43 /* Goat-Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Goat-Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF638C1A2B28722400A07E43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF638C1C2B28722400A07E43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF638C1E2B28722400A07E43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF638C1E2B28722400A07E43 /* WidgetBackgroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBackgroundVC.swift; sourceTree = "<group>"; };
 		DF638C212B28722400A07E43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF638C242B28722400A07E43 /* Goat_Weather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Goat_Weather.xcdatamodel; sourceTree = "<group>"; };
 		DF638C262B28722600A07E43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF638C292B28722600A07E43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF638C2B2B28722600A07E43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF74EDD52B2B59B400414130 /* WidgetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF74EDD72B2B5AC300414130 /* AnimatedCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedCollectionViewLayout.swift; sourceTree = "<group>"; };
+		DF9262712B287F3800879802 /* WidgetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetView.xib; sourceTree = "<group>"; };
+		DF9262732B287F4500879802 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,52 @@
 		DF638C192B28722400A07E43 /* Goat-Weather */ = {
 			isa = PBXGroup;
 			children = (
-				DF638C1A2B28722400A07E43 /* AppDelegate.swift */,
-				DF638C1C2B28722400A07E43 /* SceneDelegate.swift */,
-				DF638C1E2B28722400A07E43 /* ViewController.swift */,
-				DF638C202B28722400A07E43 /* Main.storyboard */,
-				DF638C262B28722600A07E43 /* Assets.xcassets */,
-				DF638C282B28722600A07E43 /* LaunchScreen.storyboard */,
-				DF638C2B2B28722600A07E43 /* Info.plist */,
-				DF638C232B28722400A07E43 /* Goat_Weather.xcdatamodeld */,
+				DF74EDDB2B2B68DF00414130 /* WidgetBackground */,
+				DF74EDDA2B2B68CA00414130 /* Resources */,
+				DF74EDD92B2B68C400414130 /* iOS */,
 			);
 			path = "Goat-Weather";
+			sourceTree = "<group>";
+		};
+		DF74EDD92B2B68C400414130 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DF638C1A2B28722400A07E43 /* AppDelegate.swift */,
+				DF638C1C2B28722400A07E43 /* SceneDelegate.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		DF74EDDA2B2B68CA00414130 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF638C232B28722400A07E43 /* Goat_Weather.xcdatamodeld */,
+				DF638C282B28722600A07E43 /* LaunchScreen.storyboard */,
+				DF638C2B2B28722600A07E43 /* Info.plist */,
+				DF638C262B28722600A07E43 /* Assets.xcassets */,
+				DF638C202B28722400A07E43 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DF74EDDB2B2B68DF00414130 /* WidgetBackground */ = {
+			isa = PBXGroup;
+			children = (
+				DF74EDDC2B2B690B00414130 /* views */,
+				DF638C1E2B28722400A07E43 /* WidgetBackgroundVC.swift */,
+			);
+			path = WidgetBackground;
+			sourceTree = "<group>";
+		};
+		DF74EDDC2B2B690B00414130 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				DF9262712B287F3800879802 /* WidgetView.xib */,
+				DF9262732B287F4500879802 /* WidgetView.swift */,
+				DF74EDD52B2B59B400414130 /* WidgetCollectionViewCell.swift */,
+				DF74EDD72B2B5AC300414130 /* AnimatedCollectionViewLayout.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +174,7 @@
 			files = (
 				DF638C2A2B28722600A07E43 /* LaunchScreen.storyboard in Resources */,
 				DF638C272B28722600A07E43 /* Assets.xcassets in Resources */,
+				DF9262722B287F3800879802 /* WidgetView.xib in Resources */,
 				DF638C222B28722400A07E43 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,8 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF638C1F2B28722400A07E43 /* ViewController.swift in Sources */,
+				DF638C1F2B28722400A07E43 /* WidgetBackgroundVC.swift in Sources */,
+				DF74EDD82B2B5AC300414130 /* AnimatedCollectionViewLayout.swift in Sources */,
+				DF74EDD62B2B59B400414130 /* WidgetCollectionViewCell.swift in Sources */,
 				DF638C1B2B28722400A07E43 /* AppDelegate.swift in Sources */,
+				DF9262742B287F4500879802 /* WidgetView.swift in Sources */,
 				DF638C1D2B28722400A07E43 /* SceneDelegate.swift in Sources */,
 				DF638C252B28722400A07E43 /* Goat_Weather.xcdatamodeld in Sources */,
 			);
@@ -297,14 +345,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Goat-Weather/Info.plist";
+				INFOPLIST_FILE = "Goat-Weather/Resources/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -327,14 +375,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Goat-Weather/Info.plist";
+				INFOPLIST_FILE = "Goat-Weather/Resources/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

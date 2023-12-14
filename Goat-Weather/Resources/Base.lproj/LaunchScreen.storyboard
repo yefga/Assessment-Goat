@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uHa-cU-gFz">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="egQ-0e-PoB">
+            <objects>
+                <viewController id="uHa-cU-gFz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aOZ-Cv-aHh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MUs-2x-378">
+                                <rect key="frame" x="32" y="160.99999999999997" width="329" height="317.33333333333326"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image.launch" translatesAutoresizingMaskIntoConstraints="NO" id="MUW-Cw-nbP">
+                                        <rect key="frame" x="0.0" y="0.0" width="329" height="220"/>
+                                        <color key="backgroundColor" red="0.95369678739999997" green="0.92836099859999999" blue="0.88322240110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="220" id="WY7-lT-4dM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goat Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5x-Pt-8iG">
+                                        <rect key="frame" x="0.0" y="228" width="329" height="40.666666666666686"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Take home project assessment from XYZ Goat, Inc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECy-Va-kQk">
+                                        <rect key="frame" x="0.0" y="276.66666666666669" width="329" height="40.666666666666686"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2023. Created by Yefga." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zk-lK-6qZ">
+                                <rect key="frame" x="16" y="765.66666666666663" width="361" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZyL-Xl-jxS"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.92941176469999998" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZyL-Xl-jxS" firstAttribute="bottom" secondItem="4zk-lK-6qZ" secondAttribute="bottom" constant="32" id="3BW-xC-WXi"/>
+                            <constraint firstItem="MUs-2x-378" firstAttribute="leading" secondItem="ZyL-Xl-jxS" secondAttribute="leading" constant="32" id="5a4-58-J6A"/>
+                            <constraint firstItem="ZyL-Xl-jxS" firstAttribute="trailing" secondItem="4zk-lK-6qZ" secondAttribute="trailing" constant="16" id="CLG-a7-fI4"/>
+                            <constraint firstAttribute="trailing" secondItem="MUs-2x-378" secondAttribute="trailing" constant="32" id="CzP-k0-jjV"/>
+                            <constraint firstItem="4zk-lK-6qZ" firstAttribute="leading" secondItem="ZyL-Xl-jxS" secondAttribute="leading" constant="16" id="I6U-pA-Va3"/>
+                            <constraint firstItem="MUs-2x-378" firstAttribute="centerY" secondItem="aOZ-Cv-aHh" secondAttribute="centerY" multiplier="0.75" id="eJl-C1-4OI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kPt-he-qC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image.launch" width="1024" height="1024"/>
+    </resources>
+</document>
