@@ -14,13 +14,16 @@ public struct LinearCardAttributesAnimator: LayoutAttributesAnimator {
     /// The scale rate that will applied to the cells to make it into a card.
     public var scaleRate: CGFloat
     
-    public init(minAlpha: CGFloat = 0.5, itemSpacing: CGFloat = 0.4, scaleRate: CGFloat = 0.7) {
+    public init(minAlpha: CGFloat = 0.5, 
+                itemSpacing: CGFloat = 0.4,
+                scaleRate: CGFloat = 0.7) {
         self.minAlpha = minAlpha
         self.itemSpacing = itemSpacing
         self.scaleRate = scaleRate
     }
     
-    public func animate(collectionView: UICollectionView, attributes: AnimatedCollectionViewLayoutAttributes) {
+    public func animate(collectionView: UICollectionView, 
+                        attributes: AnimatedCollectionViewLayoutAttributes) {
         let position = attributes.middleOffset
         let scaleFactor = scaleRate - 0.1 * abs(position)
         let scaleTransform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
@@ -44,7 +47,8 @@ public struct LinearCardAttributesAnimator: LayoutAttributesAnimator {
 
 
 public protocol LayoutAttributesAnimator {
-    func animate(collectionView: UICollectionView, attributes: AnimatedCollectionViewLayoutAttributes)
+    func animate(collectionView: UICollectionView,
+                 attributes: AnimatedCollectionViewLayoutAttributes)
 }
 
 /// A `UICollectionViewFlowLayout` subclass enables custom transitions between cells.
@@ -54,14 +58,28 @@ open class CustomCollectionViewLayout: UICollectionViewFlowLayout {
     open var animator: LayoutAttributesAnimator?
     
     /// Overrided so that we can store extra information in the layout attributes.
-    open override class var layoutAttributesClass: AnyClass { return AnimatedCollectionViewLayoutAttributes.self }
-    
-    open override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        guard let attributes = super.layoutAttributesForElements(in: rect) else { return nil }
-        return attributes.compactMap { $0.copy() as? AnimatedCollectionViewLayoutAttributes }.map { self.transformLayoutAttributes($0) }
+    open override class var layoutAttributesClass: AnyClass { 
+        return AnimatedCollectionViewLayoutAttributes.self
     }
     
-    open override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    open override func layoutAttributesForElements(
+        in rect: CGRect
+    ) -> [UICollectionViewLayoutAttributes]? {
+        guard let attributes = super.layoutAttributesForElements(
+            in: rect
+        ) else {
+            return nil
+        }
+        return attributes.compactMap { 
+            $0.copy() as? AnimatedCollectionViewLayoutAttributes
+        }.map {
+            self.transformLayoutAttributes($0)
+        }
+    }
+    
+    open override func shouldInvalidateLayout(
+        forBoundsChange newBounds: CGRect
+    ) -> Bool {
         // We have to return true here so that the layout attributes would be recalculated
         // everytime we scroll the collection view.
         return true
@@ -86,8 +104,12 @@ open class CustomCollectionViewLayout: UICollectionViewFlowLayout {
         if scrollDirection == .horizontal {
             distance = collectionView.frame.width
             itemOffset = a.center.x - collectionView.contentOffset.x
-            a.startOffset = (a.frame.origin.x - collectionView.contentOffset.x) / a.frame.width
-            a.endOffset = (a.frame.origin.x - collectionView.contentOffset.x - collectionView.frame.width) / a.frame.width
+            a.startOffset = (
+                a.frame.origin.x - collectionView.contentOffset.x
+            ) / a.frame.width
+            a.endOffset = (
+                a.frame.origin.x - collectionView.contentOffset.x - collectionView.frame.width
+            ) / a.frame.width
         } else {
             distance = collectionView.frame.height
             itemOffset = a.center.y - collectionView.contentOffset.y
@@ -100,7 +122,9 @@ open class CustomCollectionViewLayout: UICollectionViewFlowLayout {
         
         // Cache the contentView since we're going to use it a lot.
         if a.contentView == nil,
-            let c = collectionView.cellForItem(at: attributes.indexPath)?.contentView {
+            let c = collectionView.cellForItem(
+                at: attributes.indexPath
+            )?.contentView {
             a.contentView = c
         }
         
@@ -135,7 +159,9 @@ open class AnimatedCollectionViewLayoutAttributes: UICollectionViewLayoutAttribu
     }
     
     open override func isEqual(_ object: Any?) -> Bool {
-        guard let o = object as? AnimatedCollectionViewLayoutAttributes else { return false }
+        guard let o = object as? AnimatedCollectionViewLayoutAttributes else {
+            return false
+        }
         
         return super.isEqual(o)
             && o.contentView == contentView
