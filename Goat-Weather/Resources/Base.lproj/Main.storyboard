@@ -60,13 +60,21 @@
                                                     <action selector="changeBackground:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O71-xv-6H4"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ut8-V1-vnk">
+                                                <rect key="frame" x="177.66666666666666" y="649.33333333333337" width="38" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="ySl-Ua-7lk" firstAttribute="leading" secondItem="10A-o3-gzx" secondAttribute="leading" constant="16" id="57V-BI-TBE"/>
                                             <constraint firstAttribute="bottom" secondItem="ySl-Ua-7lk" secondAttribute="bottom" priority="200" constant="20" id="6fa-ir-bMH"/>
                                             <constraint firstAttribute="trailing" secondItem="ySl-Ua-7lk" secondAttribute="trailing" constant="16" id="MEU-Nf-Zki"/>
+                                            <constraint firstItem="ut8-V1-vnk" firstAttribute="top" secondItem="ySl-Ua-7lk" secondAttribute="bottom" constant="20" id="Mgp-3Z-ezC"/>
                                             <constraint firstItem="4sr-Ft-dYc" firstAttribute="top" secondItem="10A-o3-gzx" secondAttribute="top" id="NSs-Lp-2Wc"/>
+                                            <constraint firstItem="ut8-V1-vnk" firstAttribute="centerX" secondItem="10A-o3-gzx" secondAttribute="centerX" id="OLy-g1-Xnn"/>
                                             <constraint firstItem="ySl-Ua-7lk" firstAttribute="top" secondItem="a1i-fd-oLl" secondAttribute="bottom" constant="24" id="WXc-FI-eZO"/>
                                             <constraint firstAttribute="trailing" secondItem="4sr-Ft-dYc" secondAttribute="trailing" id="X1c-9M-HZF"/>
                                             <constraint firstItem="a1i-fd-oLl" firstAttribute="centerX" secondItem="10A-o3-gzx" secondAttribute="centerX" id="XeZ-dz-1w9"/>
@@ -100,6 +108,7 @@
                     <connections>
                         <outlet property="cardCollectionView" destination="4sr-Ft-dYc" id="jP9-8n-aR1"/>
                         <outlet property="changeButton" destination="ySl-Ua-7lk" id="2xv-vQ-IHK"/>
+                        <outlet property="errorMessageLabel" destination="ut8-V1-vnk" id="r4Z-td-2Pk"/>
                         <outlet property="pageControl" destination="a1i-fd-oLl" id="qF5-xe-aGg"/>
                     </connections>
                 </viewController>

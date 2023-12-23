@@ -34,7 +34,7 @@ import Foundation
 import Combine
 
 protocol WidgetBackgroundVMProtocol {
-    var networkClient: NetworkClient { get }
+    var networkClient: NetworkClientInterface { get }
     var photoPermission: PhotoLibraryPermission { get }
     var locationPermission: LocationPermission { get }
     
@@ -65,12 +65,12 @@ final class WidgetBackgroundVM: WidgetBackgroundVMProtocol {
     
     var photoPermission: PhotoLibraryPermission
     var locationPermission: LocationPermission
-    var networkClient: NetworkClient
+    var networkClient: NetworkClientInterface
     
     init(
         photoPermission: PhotoLibraryPermission = .init(),
         locationPermission: LocationPermission = .init(),
-        networkClient: NetworkClient = .init()
+        networkClient: NetworkClientInterface = NetworkClient()
     ) {
         self.photoPermission = photoPermission
         self.locationPermission = locationPermission
@@ -78,7 +78,9 @@ final class WidgetBackgroundVM: WidgetBackgroundVMProtocol {
     }
     
     var viewBackground: CurrentValueSubject<URL?, Never> = .init(nil)
-    var viewWidgets: CurrentValueSubject<[WidgetSize], Never> = .init([.iPhoneSmall, .iPhoneMedium, .iPhoneLarge])
+    var viewWidgets: CurrentValueSubject<[WidgetSize], Never> = .init([
+        .iPhoneSmall, .iPhoneMedium, .iPhoneLarge
+    ])
     var viewWeatherIconURL: CurrentValueSubject<String?, Never> = .init(nil)
     var viewLocation: CurrentValueSubject<String?, Never> = .init(nil)
     var currentState: CurrentValueSubject<ViewState, Never> = .init(.initial)

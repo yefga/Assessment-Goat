@@ -55,6 +55,9 @@
 		DFD896AE2B31FB2B00ABD5B0 /* Goat_weather_Entries.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD896AC2B31FB2500ABD5B0 /* Goat_weather_Entries.swift */; };
 		DFD896B02B33239900ABD5B0 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD896AF2B33239900ABD5B0 /* Configuration.swift */; };
 		DFD896B12B3323D600ABD5B0 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD896AF2B33239900ABD5B0 /* Configuration.swift */; };
+		DFDC66582B36D16900CE1547 /* WidgetBackgroundVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDC66572B36D16900CE1547 /* WidgetBackgroundVMTests.swift */; };
+		DFDC66622B37218100CE1547 /* NetworkServiceTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDC66612B37218100CE1547 /* NetworkServiceTestable.swift */; };
+		DFDC66642B37219000CE1547 /* NetworkClientTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDC66632B37219000CE1547 /* NetworkClientTestable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = DFD896822B31BA9600ABD5B0;
 			remoteInfo = "Goat-Weather-WidgetExtension";
+		};
+		DFDC66592B36D16900CE1547 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF638C0F2B28722400A07E43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF638C162B28722400A07E43;
+			remoteInfo = "Goat-Weather";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -126,6 +136,10 @@
 		DFD896A72B31FA1100ABD5B0 /* Goat_Weather_Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goat_Weather_Provider.swift; sourceTree = "<group>"; };
 		DFD896AC2B31FB2500ABD5B0 /* Goat_weather_Entries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goat_weather_Entries.swift; sourceTree = "<group>"; };
 		DFD896AF2B33239900ABD5B0 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		DFDC66552B36D16900CE1547 /* Goat-Weather-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Goat-Weather-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFDC66572B36D16900CE1547 /* WidgetBackgroundVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBackgroundVMTests.swift; sourceTree = "<group>"; };
+		DFDC66612B37218100CE1547 /* NetworkServiceTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTestable.swift; sourceTree = "<group>"; };
+		DFDC66632B37219000CE1547 /* NetworkClientTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientTestable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +162,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DFDC66522B36D16900CE1547 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -156,6 +177,7 @@
 			children = (
 				DF638C192B28722400A07E43 /* Goat-Weather */,
 				DFD896862B31BA9600ABD5B0 /* Goat-Weather-Widget */,
+				DFDC66562B36D16900CE1547 /* Goat-Weather-Tests */,
 				DF74EDE32B2C48E500414130 /* Frameworks */,
 				DF638C182B28722400A07E43 /* Products */,
 			);
@@ -166,6 +188,7 @@
 			children = (
 				DF638C172B28722400A07E43 /* Goat-Weather.app */,
 				DFD896832B31BA9600ABD5B0 /* Goat-Weather-WidgetExtension.appex */,
+				DFDC66552B36D16900CE1547 /* Goat-Weather-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -338,6 +361,32 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DFDC66562B36D16900CE1547 /* Goat-Weather-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DFDC66652B3721D400CE1547 /* WidgetBackground */,
+			);
+			path = "Goat-Weather-Tests";
+			sourceTree = "<group>";
+		};
+		DFDC66602B37216F00CE1547 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DFDC66612B37218100CE1547 /* NetworkServiceTestable.swift */,
+				DFDC66632B37219000CE1547 /* NetworkClientTestable.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DFDC66652B3721D400CE1547 /* WidgetBackground */ = {
+			isa = PBXGroup;
+			children = (
+				DFDC66602B37216F00CE1547 /* Network */,
+				DFDC66572B36D16900CE1547 /* WidgetBackgroundVMTests.swift */,
+			);
+			path = WidgetBackground;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -385,6 +434,24 @@
 			productReference = DFD896832B31BA9600ABD5B0 /* Goat-Weather-WidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		DFDC66542B36D16900CE1547 /* Goat-Weather-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFDC665B2B36D16A00CE1547 /* Build configuration list for PBXNativeTarget "Goat-Weather-Tests" */;
+			buildPhases = (
+				DFDC66512B36D16900CE1547 /* Sources */,
+				DFDC66522B36D16900CE1547 /* Frameworks */,
+				DFDC66532B36D16900CE1547 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFDC665A2B36D16900CE1547 /* PBXTargetDependency */,
+			);
+			name = "Goat-Weather-Tests";
+			productName = "Goat-Weather-Tests";
+			productReference = DFDC66552B36D16900CE1547 /* Goat-Weather-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -400,6 +467,10 @@
 					};
 					DFD896822B31BA9600ABD5B0 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					DFDC66542B36D16900CE1547 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = DF638C162B28722400A07E43;
 					};
 				};
 			};
@@ -422,6 +493,7 @@
 			targets = (
 				DF638C162B28722400A07E43 /* Goat-Weather */,
 				DFD896822B31BA9600ABD5B0 /* Goat-Weather-WidgetExtension */,
+				DFDC66542B36D16900CE1547 /* Goat-Weather-Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -442,6 +514,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD8968C2B31BA9A00ABD5B0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFDC66532B36D16900CE1547 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +579,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DFDC66512B36D16900CE1547 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFDC66622B37218100CE1547 /* NetworkServiceTestable.swift in Sources */,
+				DFDC66582B36D16900CE1547 /* WidgetBackgroundVMTests.swift in Sources */,
+				DFDC66642B37219000CE1547 /* NetworkClientTestable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -512,6 +601,11 @@
 			isa = PBXTargetDependency;
 			target = DFD896822B31BA9600ABD5B0 /* Goat-Weather-WidgetExtension */;
 			targetProxy = DFD8968E2B31BA9A00ABD5B0 /* PBXContainerItemProxy */;
+		};
+		DFDC665A2B36D16900CE1547 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF638C162B28722400A07E43 /* Goat-Weather */;
+			targetProxy = DFDC66592B36D16900CE1547 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -812,6 +906,50 @@
 			};
 			name = Release;
 		};
+		DFDC665C2B36D16A00CE1547 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "yefga.Goat-Weather-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Goat-Weather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Goat-Weather";
+			};
+			name = Debug;
+		};
+		DFDC665D2B36D16A00CE1547 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "yefga.Goat-Weather-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Goat-Weather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Goat-Weather";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -838,6 +976,15 @@
 			buildConfigurations = (
 				DFD896922B31BA9A00ABD5B0 /* Debug */,
 				DFD896932B31BA9A00ABD5B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFDC665B2B36D16A00CE1547 /* Build configuration list for PBXNativeTarget "Goat-Weather-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFDC665C2B36D16A00CE1547 /* Debug */,
+				DFDC665D2B36D16A00CE1547 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

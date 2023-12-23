@@ -49,7 +49,8 @@ class WidgetBackgroundVC: UIViewController {
     @IBOutlet weak var cardCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var changeButton: UIButton!
-        
+    @IBOutlet weak var errorMessageLabel: UILabel!
+    
     private var cancelBag = Set<AnyCancellable>()
 
     override func viewWillAppear(_ animated: Bool) {
@@ -109,6 +110,17 @@ class WidgetBackgroundVC: UIViewController {
             .sink { [weak self] _ in
                 DispatchQueue.main.async {
                     self?.cardCollectionView.reloadData()
+                }
+            }.store(in: &cancelBag)
+        
+        viewModel.currentState
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] state in
+                if case let .error(message) = state {
+                    self?.errorMessageLabel.text = message
+                    self?.errorMessageLabel.isHidden = false
+                } else {
+                    self?.errorMessageLabel.isHidden = true
                 }
             }.store(in: &cancelBag)
     }
