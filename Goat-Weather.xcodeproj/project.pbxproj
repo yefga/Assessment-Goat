@@ -7,33 +7,125 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF6212BB2B335116004AB354 /* Goat-Weather-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DFD896832B31BA9600ABD5B0 /* Goat-Weather-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DF6212BD2B3426A2004AB354 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6212BC2B3426A2004AB354 /* URL.swift */; };
+		DF6212BE2B342740004AB354 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6212BC2B3426A2004AB354 /* URL.swift */; };
 		DF638C1B2B28722400A07E43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF638C1A2B28722400A07E43 /* AppDelegate.swift */; };
 		DF638C1D2B28722400A07E43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF638C1C2B28722400A07E43 /* SceneDelegate.swift */; };
 		DF638C1F2B28722400A07E43 /* WidgetBackgroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF638C1E2B28722400A07E43 /* WidgetBackgroundVC.swift */; };
 		DF638C222B28722400A07E43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF638C202B28722400A07E43 /* Main.storyboard */; };
-		DF638C252B28722400A07E43 /* Goat_Weather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF638C232B28722400A07E43 /* Goat_Weather.xcdatamodeld */; };
 		DF638C272B28722600A07E43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF638C262B28722600A07E43 /* Assets.xcassets */; };
 		DF638C2A2B28722600A07E43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF638C282B28722600A07E43 /* LaunchScreen.storyboard */; };
 		DF74EDD62B2B59B400414130 /* WidgetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EDD52B2B59B400414130 /* WidgetCollectionViewCell.swift */; };
 		DF74EDD82B2B5AC300414130 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EDD72B2B5AC300414130 /* CustomCollectionViewLayout.swift */; };
-		DF9262722B287F3800879802 /* WidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF9262712B287F3800879802 /* WidgetView.xib */; };
-		DF9262742B287F4500879802 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9262732B287F4500879802 /* WidgetView.swift */; };
+		DF74EDFE2B2C821500414130 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EDFD2B2C821500414130 /* UIImage.swift */; };
+		DF74EE1D2B2DD4EE00414130 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE1C2B2DD4EE00414130 /* NetworkService.swift */; };
+		DF74EE202B2DD69900414130 /* WeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE1F2B2DD69900414130 /* WeatherProvider.swift */; };
+		DF74EE222B2DE2DC00414130 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE212B2DE2DC00414130 /* NetworkError.swift */; };
+		DF74EE242B2DE31700414130 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE232B2DE31700414130 /* Request.swift */; };
+		DF74EE262B2DE33C00414130 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE252B2DE33C00414130 /* NetworkClient.swift */; };
+		DF74EE282B2DE36200414130 /* WidgetBackgroundVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE272B2DE36200414130 /* WidgetBackgroundVM.swift */; };
+		DF74EE2B2B2DE3BF00414130 /* OpenWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE2A2B2DE3BF00414130 /* OpenWeatherModel.swift */; };
+		DF74EE2E2B2DE60D00414130 /* LocationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE2D2B2DE60D00414130 /* LocationPermission.swift */; };
+		DF74EE302B2DE61A00414130 /* PhotoPermisison.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE2F2B2DE61A00414130 /* PhotoPermisison.swift */; };
+		DF74EE382B2DF44C00414130 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = DF74EE372B2DF44C00414130 /* netfox */; };
+		DFBB57E32B2ED37100EF47F8 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBB57E22B2ED37100EF47F8 /* FileManager.swift */; };
+		DFBB57EB2B2F317700EF47F8 /* DatabaseFileManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBB57EA2B2F317700EF47F8 /* DatabaseFileManagerError.swift */; };
+		DFBB57FD2B2F3F3200EF47F8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DFBB57FC2B2F3F3200EF47F8 /* Kingfisher */; };
+		DFD896842B31BA9600ABD5B0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF74EDE42B2C48E500414130 /* WidgetKit.framework */; };
+		DFD896852B31BA9600ABD5B0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF74EDE62B2C48E500414130 /* SwiftUI.framework */; };
+		DFD896882B31BA9600ABD5B0 /* Goat_Weather_WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD896872B31BA9600ABD5B0 /* Goat_Weather_WidgetBundle.swift */; };
+		DFD8968A2B31BA9600ABD5B0 /* Goat_Weather_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD896892B31BA9600ABD5B0 /* Goat_Weather_Widget.swift */; };
+		DFD8968C2B31BA9A00ABD5B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD8968B2B31BA9A00ABD5B0 /* Assets.xcassets */; };
+		DFD896962B31BD7500ABD5B0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DFD896952B31BD7500ABD5B0 /* Kingfisher */; };
+		DFD896972B31C59E00ABD5B0 /* OpenWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE2A2B2DE3BF00414130 /* OpenWeatherModel.swift */; };
+		DFD896982B31C5A600ABD5B0 /* DatabaseFileManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBB57EA2B2F317700EF47F8 /* DatabaseFileManagerError.swift */; };
+		DFD896992B31C5A600ABD5B0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE212B2DE2DC00414130 /* NetworkError.swift */; };
+		DFD8969A2B31C5A900ABD5B0 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBB57E22B2ED37100EF47F8 /* FileManager.swift */; };
+		DFD8969B2B31C5AE00ABD5B0 /* PhotoPermisison.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE2F2B2DE61A00414130 /* PhotoPermisison.swift */; };
+		DFD8969C2B31C5AE00ABD5B0 /* LocationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE2D2B2DE60D00414130 /* LocationPermission.swift */; };
+		DFD8969D2B31C5B100ABD5B0 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE232B2DE31700414130 /* Request.swift */; };
+		DFD8969E2B31C5B100ABD5B0 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE252B2DE33C00414130 /* NetworkClient.swift */; };
+		DFD8969F2B31C5B100ABD5B0 /* WeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE1F2B2DD69900414130 /* WeatherProvider.swift */; };
+		DFD896A02B31C5B100ABD5B0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74EE1C2B2DD4EE00414130 /* NetworkService.swift */; };
+		DFD896A22B31E02800ABD5B0 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD896A12B31E02800ABD5B0 /* UserDefaults.swift */; };
+		DFD896A32B31F72E00ABD5B0 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD896A12B31E02800ABD5B0 /* UserDefaults.swift */; };
+		DFD896A92B31FA7500ABD5B0 /* Goat_Weather_Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD896A72B31FA1100ABD5B0 /* Goat_Weather_Provider.swift */; };
+		DFD896AB2B31FA7F00ABD5B0 /* Goat_Weather_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD896A52B31F9D200ABD5B0 /* Goat_Weather_View.swift */; };
+		DFD896AE2B31FB2B00ABD5B0 /* Goat_weather_Entries.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD896AC2B31FB2500ABD5B0 /* Goat_weather_Entries.swift */; };
+		DFD896B02B33239900ABD5B0 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD896AF2B33239900ABD5B0 /* Configuration.swift */; };
+		DFD896B12B3323D600ABD5B0 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD896AF2B33239900ABD5B0 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DF91EFE92B3337BE00E751CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF638C0F2B28722400A07E43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFD896822B31BA9600ABD5B0;
+			remoteInfo = "Goat-Weather-WidgetExtension";
+		};
+		DFD8968E2B31BA9A00ABD5B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF638C0F2B28722400A07E43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFD896822B31BA9600ABD5B0;
+			remoteInfo = "Goat-Weather-WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF6212B92B334B56004AB354 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DF6212BB2B335116004AB354 /* Goat-Weather-WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DF6212BC2B3426A2004AB354 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		DF638C172B28722400A07E43 /* Goat-Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Goat-Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF638C1A2B28722400A07E43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF638C1C2B28722400A07E43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DF638C1E2B28722400A07E43 /* WidgetBackgroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBackgroundVC.swift; sourceTree = "<group>"; };
 		DF638C212B28722400A07E43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DF638C242B28722400A07E43 /* Goat_Weather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Goat_Weather.xcdatamodel; sourceTree = "<group>"; };
 		DF638C262B28722600A07E43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF638C292B28722600A07E43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF638C2B2B28722600A07E43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF74EDD52B2B59B400414130 /* WidgetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF74EDD72B2B5AC300414130 /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
-		DF9262712B287F3800879802 /* WidgetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetView.xib; sourceTree = "<group>"; };
-		DF9262732B287F4500879802 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		DF74EDE42B2C48E500414130 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		DF74EDE62B2C48E500414130 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		DF74EDFD2B2C821500414130 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		DF74EE1C2B2DD4EE00414130 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DF74EE1F2B2DD69900414130 /* WeatherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherProvider.swift; sourceTree = "<group>"; };
+		DF74EE212B2DE2DC00414130 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		DF74EE232B2DE31700414130 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		DF74EE252B2DE33C00414130 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		DF74EE272B2DE36200414130 /* WidgetBackgroundVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBackgroundVM.swift; sourceTree = "<group>"; };
+		DF74EE2A2B2DE3BF00414130 /* OpenWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherModel.swift; sourceTree = "<group>"; };
+		DF74EE2D2B2DE60D00414130 /* LocationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermission.swift; sourceTree = "<group>"; };
+		DF74EE2F2B2DE61A00414130 /* PhotoPermisison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPermisison.swift; sourceTree = "<group>"; };
+		DF9BBD882B2F7DD800CBF9C6 /* Goat-Weather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Goat-Weather.entitlements"; sourceTree = "<group>"; };
+		DF9BBD892B2F7EE100CBF9C6 /* Goat-Weather-WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Goat-Weather-WidgetExtension.entitlements"; sourceTree = "<group>"; };
+		DFBB57E22B2ED37100EF47F8 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		DFBB57EA2B2F317700EF47F8 /* DatabaseFileManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFileManagerError.swift; sourceTree = "<group>"; };
+		DFD896832B31BA9600ABD5B0 /* Goat-Weather-WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Goat-Weather-WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD896872B31BA9600ABD5B0 /* Goat_Weather_WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goat_Weather_WidgetBundle.swift; sourceTree = "<group>"; };
+		DFD896892B31BA9600ABD5B0 /* Goat_Weather_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goat_Weather_Widget.swift; sourceTree = "<group>"; };
+		DFD8968B2B31BA9A00ABD5B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFD8968D2B31BA9A00ABD5B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFD896A12B31E02800ABD5B0 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		DFD896A52B31F9D200ABD5B0 /* Goat_Weather_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goat_Weather_View.swift; sourceTree = "<group>"; };
+		DFD896A72B31FA1100ABD5B0 /* Goat_Weather_Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goat_Weather_Provider.swift; sourceTree = "<group>"; };
+		DFD896AC2B31FB2500ABD5B0 /* Goat_weather_Entries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goat_weather_Entries.swift; sourceTree = "<group>"; };
+		DFD896AF2B33239900ABD5B0 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +133,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFBB57FD2B2F3F3200EF47F8 /* Kingfisher in Frameworks */,
+				DF74EE382B2DF44C00414130 /* netfox in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFD896802B31BA9600ABD5B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFD896962B31BD7500ABD5B0 /* Kingfisher in Frameworks */,
+				DFD896852B31BA9600ABD5B0 /* SwiftUI.framework in Frameworks */,
+				DFD896842B31BA9600ABD5B0 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				DF638C192B28722400A07E43 /* Goat-Weather */,
+				DFD896862B31BA9600ABD5B0 /* Goat-Weather-Widget */,
+				DF74EDE32B2C48E500414130 /* Frameworks */,
 				DF638C182B28722400A07E43 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				DF638C172B28722400A07E43 /* Goat-Weather.app */,
+				DFD896832B31BA9600ABD5B0 /* Goat-Weather-WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,7 +173,9 @@
 		DF638C192B28722400A07E43 /* Goat-Weather */ = {
 			isa = PBXGroup;
 			children = (
-				DF74EDDD2B2B6CAE00414130 /* Services */,
+				DF74EE292B2DE3B300414130 /* Shared */,
+				DF74EE172B2DC6AF00414130 /* Services */,
+				DF74EDFB2B2C81F700414130 /* UI */,
 				DF74EDDB2B2B68DF00414130 /* WidgetBackground */,
 				DF74EDDA2B2B68CA00414130 /* Resources */,
 				DF74EDD92B2B68C400414130 /* iOS */,
@@ -86,9 +195,9 @@
 		DF74EDDA2B2B68CA00414130 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DF638C232B28722400A07E43 /* Goat_Weather.xcdatamodeld */,
 				DF638C282B28722600A07E43 /* LaunchScreen.storyboard */,
 				DF638C2B2B28722600A07E43 /* Info.plist */,
+				DF9BBD882B2F7DD800CBF9C6 /* Goat-Weather.entitlements */,
 				DF638C262B28722600A07E43 /* Assets.xcassets */,
 				DF638C202B28722400A07E43 /* Main.storyboard */,
 			);
@@ -100,6 +209,7 @@
 			children = (
 				DF74EDDC2B2B690B00414130 /* views */,
 				DF638C1E2B28722400A07E43 /* WidgetBackgroundVC.swift */,
+				DF74EE272B2DE36200414130 /* WidgetBackgroundVM.swift */,
 			);
 			path = WidgetBackground;
 			sourceTree = "<group>";
@@ -107,19 +217,125 @@
 		DF74EDDC2B2B690B00414130 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				DF9262712B287F3800879802 /* WidgetView.xib */,
-				DF9262732B287F4500879802 /* WidgetView.swift */,
 				DF74EDD52B2B59B400414130 /* WidgetCollectionViewCell.swift */,
-				DF74EDD72B2B5AC300414130 /* CustomCollectionViewLayout.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
 		};
-		DF74EDDD2B2B6CAE00414130 /* Services */ = {
+		DF74EDE32B2C48E500414130 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF74EDE42B2C48E500414130 /* WidgetKit.framework */,
+				DF74EDE62B2C48E500414130 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF74EDFB2B2C81F700414130 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DF74EDD72B2B5AC300414130 /* CustomCollectionViewLayout.swift */,
+				DF74EDFC2B2C820B00414130 /* Extensions */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DF74EDFC2B2C820B00414130 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DF74EDFD2B2C821500414130 /* UIImage.swift */,
+				DF6212BC2B3426A2004AB354 /* URL.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DF74EE172B2DC6AF00414130 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DFBB57E72B2F316100EF47F8 /* Error */,
+				DFBB57E12B2ED36000EF47F8 /* Database */,
+				DF74EE2C2B2DE5F600414130 /* Permission */,
+				DF74EE1B2B2DD4AC00414130 /* Networking */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		DF74EE1B2B2DD4AC00414130 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DF74EE1E2B2DD68900414130 /* Provider */,
+				DF74EE1C2B2DD4EE00414130 /* NetworkService.swift */,
+				DF74EE232B2DE31700414130 /* Request.swift */,
+				DF74EE252B2DE33C00414130 /* NetworkClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		DF74EE1E2B2DD68900414130 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				DF74EE1F2B2DD69900414130 /* WeatherProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		DF74EE292B2DE3B300414130 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DF74EE2A2B2DE3BF00414130 /* OpenWeatherModel.swift */,
+				DFD896AF2B33239900ABD5B0 /* Configuration.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		DF74EE2C2B2DE5F600414130 /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				DF74EE2D2B2DE60D00414130 /* LocationPermission.swift */,
+				DF74EE2F2B2DE61A00414130 /* PhotoPermisison.swift */,
+			);
+			path = Permission;
+			sourceTree = "<group>";
+		};
+		DFBB57E12B2ED36000EF47F8 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				DFBB57E22B2ED37100EF47F8 /* FileManager.swift */,
+				DFD896A12B31E02800ABD5B0 /* UserDefaults.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		DFBB57E72B2F316100EF47F8 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				DF74EE212B2DE2DC00414130 /* NetworkError.swift */,
+				DFBB57EA2B2F317700EF47F8 /* DatabaseFileManagerError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		DFD896862B31BA9600ABD5B0 /* Goat-Weather-Widget */ = {
+			isa = PBXGroup;
+			children = (
+				DFD896A42B31F9BC00ABD5B0 /* Views */,
+				DF9BBD892B2F7EE100CBF9C6 /* Goat-Weather-WidgetExtension.entitlements */,
+				DFD896872B31BA9600ABD5B0 /* Goat_Weather_WidgetBundle.swift */,
+				DFD896892B31BA9600ABD5B0 /* Goat_Weather_Widget.swift */,
+				DFD8968B2B31BA9A00ABD5B0 /* Assets.xcassets */,
+				DFD8968D2B31BA9A00ABD5B0 /* Info.plist */,
+				DFD896A72B31FA1100ABD5B0 /* Goat_Weather_Provider.swift */,
+				DFD896AC2B31FB2500ABD5B0 /* Goat_weather_Entries.swift */,
+			);
+			path = "Goat-Weather-Widget";
+			sourceTree = "<group>";
+		};
+		DFD896A42B31F9BC00ABD5B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFD896A52B31F9D200ABD5B0 /* Goat_Weather_View.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,15 +348,42 @@
 				DF638C132B28722400A07E43 /* Sources */,
 				DF638C142B28722400A07E43 /* Frameworks */,
 				DF638C152B28722400A07E43 /* Resources */,
+				DF6212B92B334B56004AB354 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFD8968F2B31BA9A00ABD5B0 /* PBXTargetDependency */,
+				DF91EFEA2B3337BE00E751CA /* PBXTargetDependency */,
+			);
+			name = "Goat-Weather";
+			packageProductDependencies = (
+				DF74EE372B2DF44C00414130 /* netfox */,
+				DFBB57FC2B2F3F3200EF47F8 /* Kingfisher */,
+			);
+			productName = "Goat-Weather";
+			productReference = DF638C172B28722400A07E43 /* Goat-Weather.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DFD896822B31BA9600ABD5B0 /* Goat-Weather-WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFD896912B31BA9A00ABD5B0 /* Build configuration list for PBXNativeTarget "Goat-Weather-WidgetExtension" */;
+			buildPhases = (
+				DFD8967F2B31BA9600ABD5B0 /* Sources */,
+				DFD896802B31BA9600ABD5B0 /* Frameworks */,
+				DFD896812B31BA9600ABD5B0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Goat-Weather";
-			productName = "Goat-Weather";
-			productReference = DF638C172B28722400A07E43 /* Goat-Weather.app */;
-			productType = "com.apple.product-type.application";
+			name = "Goat-Weather-WidgetExtension";
+			packageProductDependencies = (
+				DFD896952B31BD7500ABD5B0 /* Kingfisher */,
+			);
+			productName = "Goat-Weather-WidgetExtension";
+			productReference = DFD896832B31BA9600ABD5B0 /* Goat-Weather-WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -155,6 +398,9 @@
 					DF638C162B28722400A07E43 = {
 						CreatedOnToolsVersion = 15.0;
 					};
+					DFD896822B31BA9600ABD5B0 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 				};
 			};
 			buildConfigurationList = DF638C122B28722400A07E43 /* Build configuration list for PBXProject "Goat-Weather" */;
@@ -166,11 +412,16 @@
 				Base,
 			);
 			mainGroup = DF638C0E2B28722400A07E43;
+			packageReferences = (
+				DF74EE362B2DF44C00414130 /* XCRemoteSwiftPackageReference "netfox" */,
+				DFBB57F92B2F3F1500EF47F8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = DF638C182B28722400A07E43 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				DF638C162B28722400A07E43 /* Goat-Weather */,
+				DFD896822B31BA9600ABD5B0 /* Goat-Weather-WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -182,8 +433,15 @@
 			files = (
 				DF638C2A2B28722600A07E43 /* LaunchScreen.storyboard in Resources */,
 				DF638C272B28722600A07E43 /* Assets.xcassets in Resources */,
-				DF9262722B287F3800879802 /* WidgetView.xib in Resources */,
 				DF638C222B28722400A07E43 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFD896812B31BA9600ABD5B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFD8968C2B31BA9A00ABD5B0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,17 +452,68 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF74EE282B2DE36200414130 /* WidgetBackgroundVM.swift in Sources */,
 				DF638C1F2B28722400A07E43 /* WidgetBackgroundVC.swift in Sources */,
+				DF74EE242B2DE31700414130 /* Request.swift in Sources */,
+				DFD896B02B33239900ABD5B0 /* Configuration.swift in Sources */,
+				DFBB57EB2B2F317700EF47F8 /* DatabaseFileManagerError.swift in Sources */,
+				DF74EDFE2B2C821500414130 /* UIImage.swift in Sources */,
+				DF74EE2B2B2DE3BF00414130 /* OpenWeatherModel.swift in Sources */,
+				DFBB57E32B2ED37100EF47F8 /* FileManager.swift in Sources */,
+				DF74EE2E2B2DE60D00414130 /* LocationPermission.swift in Sources */,
 				DF74EDD82B2B5AC300414130 /* CustomCollectionViewLayout.swift in Sources */,
+				DF74EE1D2B2DD4EE00414130 /* NetworkService.swift in Sources */,
 				DF74EDD62B2B59B400414130 /* WidgetCollectionViewCell.swift in Sources */,
 				DF638C1B2B28722400A07E43 /* AppDelegate.swift in Sources */,
-				DF9262742B287F4500879802 /* WidgetView.swift in Sources */,
+				DF74EE262B2DE33C00414130 /* NetworkClient.swift in Sources */,
 				DF638C1D2B28722400A07E43 /* SceneDelegate.swift in Sources */,
-				DF638C252B28722400A07E43 /* Goat_Weather.xcdatamodeld in Sources */,
+				DF6212BD2B3426A2004AB354 /* URL.swift in Sources */,
+				DFD896A22B31E02800ABD5B0 /* UserDefaults.swift in Sources */,
+				DF74EE302B2DE61A00414130 /* PhotoPermisison.swift in Sources */,
+				DF74EE222B2DE2DC00414130 /* NetworkError.swift in Sources */,
+				DF74EE202B2DD69900414130 /* WeatherProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFD8967F2B31BA9600ABD5B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFD896882B31BA9600ABD5B0 /* Goat_Weather_WidgetBundle.swift in Sources */,
+				DFD8969E2B31C5B100ABD5B0 /* NetworkClient.swift in Sources */,
+				DFD8969F2B31C5B100ABD5B0 /* WeatherProvider.swift in Sources */,
+				DFD896AB2B31FA7F00ABD5B0 /* Goat_Weather_View.swift in Sources */,
+				DFD8968A2B31BA9600ABD5B0 /* Goat_Weather_Widget.swift in Sources */,
+				DFD896A92B31FA7500ABD5B0 /* Goat_Weather_Provider.swift in Sources */,
+				DFD896A32B31F72E00ABD5B0 /* UserDefaults.swift in Sources */,
+				DFD896972B31C59E00ABD5B0 /* OpenWeatherModel.swift in Sources */,
+				DFD896AE2B31FB2B00ABD5B0 /* Goat_weather_Entries.swift in Sources */,
+				DFD8969A2B31C5A900ABD5B0 /* FileManager.swift in Sources */,
+				DFD896B12B3323D600ABD5B0 /* Configuration.swift in Sources */,
+				DF6212BE2B342740004AB354 /* URL.swift in Sources */,
+				DFD896982B31C5A600ABD5B0 /* DatabaseFileManagerError.swift in Sources */,
+				DFD8969C2B31C5AE00ABD5B0 /* LocationPermission.swift in Sources */,
+				DFD8969B2B31C5AE00ABD5B0 /* PhotoPermisison.swift in Sources */,
+				DFD8969D2B31C5B100ABD5B0 /* Request.swift in Sources */,
+				DFD896A02B31C5B100ABD5B0 /* NetworkService.swift in Sources */,
+				DFD896992B31C5A600ABD5B0 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF91EFEA2B3337BE00E751CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFD896822B31BA9600ABD5B0 /* Goat-Weather-WidgetExtension */;
+			targetProxy = DF91EFE92B3337BE00E751CA /* PBXContainerItemProxy */;
+		};
+		DFD8968F2B31BA9A00ABD5B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFD896822B31BA9600ABD5B0 /* Goat-Weather-WidgetExtension */;
+			targetProxy = DFD8968E2B31BA9A00ABD5B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DF638C202B28722400A07E43 /* Main.storyboard */ = {
@@ -278,7 +587,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -335,7 +644,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -348,27 +657,42 @@
 		DF638C2F2B28722600A07E43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Goat-Weather/Resources/Goat-Weather.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = YG25GXN392;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Goat-Weather/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = GoatWeather;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We require your location to provide personalized backgrounds based on the current weather. Granting access will allow us to enhance your experience by dynamically adjusting the widget background to match the weather conditions in your area.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We require your location to provide personalized backgrounds based on the current weather. Granting access will allow us to enhance your experience by dynamically adjusting the widget background to match the weather conditions in your area.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "We require your location to provide personalized backgrounds based on the current weather. Granting access will allow us to enhance your experience by dynamically adjusting the widget background to match the weather conditions in your area.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We require your location to provide personalized backgrounds based on the current weather. Granting access will allow us to enhance your experience by dynamically adjusting the widget background to match the weather conditions in your area.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to allow you to change the widget background. Select a photo from your library to personalize your widget's appearance.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "yefga.Goat-Weather";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yefga.GoatWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = XYZGoatWeather;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -378,27 +702,110 @@
 		DF638C302B28722600A07E43 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Goat-Weather/Resources/Goat-Weather.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = YG25GXN392;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Goat-Weather/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = GoatWeather;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We require your location to provide personalized backgrounds based on the current weather. Granting access will allow us to enhance your experience by dynamically adjusting the widget background to match the weather conditions in your area.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We require your location to provide personalized backgrounds based on the current weather. Granting access will allow us to enhance your experience by dynamically adjusting the widget background to match the weather conditions in your area.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "We require your location to provide personalized backgrounds based on the current weather. Granting access will allow us to enhance your experience by dynamically adjusting the widget background to match the weather conditions in your area.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We require your location to provide personalized backgrounds based on the current weather. Granting access will allow us to enhance your experience by dynamically adjusting the widget background to match the weather conditions in your area.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to allow you to change the widget background. Select a photo from your library to personalize your widget's appearance.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "yefga.Goat-Weather";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yefga.GoatWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = XYZGoatWeather;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DFD896922B31BA9A00ABD5B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Goat-Weather-Widget/Goat-Weather-WidgetExtension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = YG25GXN392;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Goat-Weather-Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = GoatWeather;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yefga.GoatWeather.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = XYZGoatWeatherWidget;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DFD896932B31BA9A00ABD5B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Goat-Weather-Widget/Goat-Weather-WidgetExtension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = YG25GXN392;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Goat-Weather-Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = GoatWeather;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yefga.GoatWeather.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = XYZGoatWeatherWidget;
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -426,20 +833,53 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		DFD896912B31BA9A00ABD5B0 /* Build configuration list for PBXNativeTarget "Goat-Weather-WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFD896922B31BA9A00ABD5B0 /* Debug */,
+				DFD896932B31BA9A00ABD5B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		DF638C232B28722400A07E43 /* Goat_Weather.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DF638C242B28722400A07E43 /* Goat_Weather.xcdatamodel */,
-			);
-			currentVersion = DF638C242B28722400A07E43 /* Goat_Weather.xcdatamodel */;
-			path = Goat_Weather.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCRemoteSwiftPackageReference section */
+		DF74EE362B2DF44C00414130 /* XCRemoteSwiftPackageReference "netfox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kasketis/netfox";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.21.0;
+			};
 		};
-/* End XCVersionGroup section */
+		DFBB57F92B2F3F1500EF47F8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF74EE372B2DF44C00414130 /* netfox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF74EE362B2DF44C00414130 /* XCRemoteSwiftPackageReference "netfox" */;
+			productName = netfox;
+		};
+		DFBB57FC2B2F3F3200EF47F8 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFBB57F92B2F3F1500EF47F8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		DFD896952B31BD7500ABD5B0 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFBB57F92B2F3F1500EF47F8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF638C0F2B28722400A07E43 /* Project object */;
 }

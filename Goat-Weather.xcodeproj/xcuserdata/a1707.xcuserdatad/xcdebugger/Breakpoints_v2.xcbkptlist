@@ -3,4 +3,324 @@
    uuid = "A179CF79-FDA9-4015-95D9-792635113E3D"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE08E748-5D67-4C40-8C21-915838A95211"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Goat-Weather-Widget/GoatWeatherWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "makeBackground()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C9197F4-9DB3-4188-9BD2-2FC055DD9686"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Goat-Weather-Widget/GoatWeatherWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
+            landmarkName = "makeBackground()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A525C63C-0C00-4B48-AEFB-A188C1DE3569"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Goat-Weather-Widget/GoatWeatherWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "createEntry(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AA046400-8C38-4159-82A9-E0A8792121D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Goat-Weather-Widget/GoatWeatherWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "getBackground()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AA046400-8C38-4159-82A9-E0A8792121D2 - 36eb80212227b443"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Goat_Weather_WidgetExtension.GoatWeatherTimelineProvider.getBackground() throws -&gt; Swift.Optional&lt;__C.UIImage&gt;"
+                  moduleName = "Goat-Weather-WidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1707/Desktop/Assessment/Goat-Weather/Goat-Weather-Widget/GoatWeatherWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "281">
+               </Location>
+               <Location
+                  uuid = "AA046400-8C38-4159-82A9-E0A8792121D2 - 36eb80212227b43c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Goat_Weather_WidgetExtension.GoatWeatherTimelineProvider.getBackground() throws -&gt; Swift.Optional&lt;__C.UIImage&gt;"
+                  moduleName = "Goat-Weather-WidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1707/Desktop/Assessment/Goat-Weather/Goat-Weather-Widget/GoatWeatherWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "281">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0392452B-8711-4D89-810C-0858961813A0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Goat-Weather-Widget/GoatWeatherWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "getSnapshot(in:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4DAAEFCE-8AD9-4C6B-B3C4-2496AB2F16B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Goat-Weather-Widget/GoatWeatherWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "getSnapshot(in:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA8951D1-0205-4F71-9009-34F728635023"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Goat-Weather-Widget/GoatWeatherWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "createEntry(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52BBA455-9FBA-4939-8FD1-22255B537DC5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Goat-Weather-Widget/GoatWeatherWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "getTimeline(in:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "52BBA455-9FBA-4939-8FD1-22255B537DC5 - 21e8fb856cc45db1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Goat_Weather_WidgetExtension.GoatWeatherTimelineProvider.getTimeline(in: WidgetKit.TimelineProviderContext, completion: (WidgetKit.Timeline&lt;Goat_Weather_WidgetExtension.GoatWeatherEntry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Goat-Weather-WidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1707/Desktop/Assessment/Goat-Weather/Goat-Weather-Widget/GoatWeatherWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "52BBA455-9FBA-4939-8FD1-22255B537DC5 - b184b2df74be79d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in Goat_Weather_WidgetExtension.GoatWeatherTimelineProvider.getTimeline(in: WidgetKit.TimelineProviderContext, completion: (WidgetKit.Timeline&lt;Goat_Weather_WidgetExtension.GoatWeatherEntry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Goat-Weather-WidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1707/Desktop/Assessment/Goat-Weather/Goat-Weather-Widget/GoatWeatherWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "52BBA455-9FBA-4939-8FD1-22255B537DC5 - 21e8fb856cc45db1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Goat_Weather_WidgetExtension.GoatWeatherTimelineProvider.getTimeline(in: WidgetKit.TimelineProviderContext, completion: (WidgetKit.Timeline&lt;Goat_Weather_WidgetExtension.GoatWeatherEntry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Goat-Weather-WidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1707/Desktop/Assessment/Goat-Weather/Goat-Weather-Widget/GoatWeatherWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "792">
+               </Location>
+               <Location
+                  uuid = "52BBA455-9FBA-4939-8FD1-22255B537DC5 - f539f9d42c02a1c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Goat_Weather_WidgetExtension.GoatWeatherEntry) -&gt; () in Goat_Weather_WidgetExtension.GoatWeatherTimelineProvider.getTimeline(in: WidgetKit.TimelineProviderContext, completion: (WidgetKit.Timeline&lt;Goat_Weather_WidgetExtension.GoatWeatherEntry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Goat-Weather-WidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1707/Desktop/Assessment/Goat-Weather/Goat-Weather-Widget/GoatWeatherWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "205">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0646CF4-5C4E-4CC7-987A-48B4D9191544"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Goat-Weather-Widget/GoatWeatherWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "getSnapshot(in:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B0646CF4-5C4E-4CC7-987A-48B4D9191544 - c9ff3d829404b96"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Goat_Weather_WidgetExtension.GoatWeatherTimelineProvider.getSnapshot(in: WidgetKit.TimelineProviderContext, completion: (Goat_Weather_WidgetExtension.GoatWeatherEntry) -&gt; ()) -&gt; ()"
+                  moduleName = "Goat-Weather-WidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1707/Desktop/Assessment/Goat-Weather/Goat-Weather-Widget/GoatWeatherWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "78">
+               </Location>
+               <Location
+                  uuid = "B0646CF4-5C4E-4CC7-987A-48B4D9191544 - a3bd6873c524556c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in Goat_Weather_WidgetExtension.GoatWeatherTimelineProvider.getSnapshot(in: WidgetKit.TimelineProviderContext, completion: (Goat_Weather_WidgetExtension.GoatWeatherEntry) -&gt; ()) -&gt; ()"
+                  moduleName = "Goat-Weather-WidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1707/Desktop/Assessment/Goat-Weather/Goat-Weather-Widget/GoatWeatherWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9386AF08-1EC5-481C-A939-4E8B8A86AA41"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Goat-Weather-Widget/GoatWeatherWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "createEntry(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9386AF08-1EC5-481C-A939-4E8B8A86AA41 - 206f90ec90fa0135"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Goat_Weather_WidgetExtension.GoatWeatherTimelineProvider.createEntry(completion: (Goat_Weather_WidgetExtension.GoatWeatherEntry) -&gt; ()) -&gt; ()"
+                  moduleName = "Goat-Weather-WidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1707/Desktop/Assessment/Goat-Weather/Goat-Weather-Widget/GoatWeatherWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "607">
+               </Location>
+               <Location
+                  uuid = "9386AF08-1EC5-481C-A939-4E8B8A86AA41 - 421a81d36a7d7878"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in Goat_Weather_WidgetExtension.GoatWeatherTimelineProvider.createEntry(completion: (Goat_Weather_WidgetExtension.GoatWeatherEntry) -&gt; ()) -&gt; ()"
+                  moduleName = "Goat-Weather-WidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1707/Desktop/Assessment/Goat-Weather/Goat-Weather-Widget/GoatWeatherWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

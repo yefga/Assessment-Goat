@@ -29,35 +29,62 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
-///
 
 import Foundation
-import UIKit
 
-class WidgetView: UIView {
+// MARK: - OpenWeatherAPI Model
+struct OpenWeatherModel: Codable, Equatable {
+    let message: String?
+    let coord: CoordModel?
+    let weather: [WeatherModel]?
+    let sys: SysModel?
+    let name: String?
     
-    @IBOutlet weak var weatherImageView: UIImageView!
-    @IBOutlet weak var weatherImageTrailing: NSLayoutConstraint!
-    @IBOutlet weak var locationLabel: UILabel!
-  
-    private func setupUI() {
-        // Add your view configuration code here
-        backgroundColor = .yellow
-        locationLabel.font = .systemFont(ofSize: 20, weight: .bold)
+    var location: String {
+        let city = name ?? ""
+        let country = self.sys?.country ?? ""
+        let location = "\(city.capitalized), \(country.uppercased())"
+        return location
     }
     
-    // MARK: Initialization (Storyboard / XIB)
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupUI()
+    func iconURL(_ name: String) -> String {
+        return "https://openweathermap.org/img/wn/\(name)@2x.png"
     }
-    
-    func updateUI(_ data: WidgetModel) {
-        self.locationLabel.text = data.location
-        if data.size == .iPhoneMedium {
-            weatherImageTrailing.isActive = false
-        }
-    }
-    
+
 }
 
+// MARK: - CoordModel
+struct CoordModel: Codable, Equatable {
+    let lon, lat: Double?
+}
+
+// MARK: - Weather
+struct WeatherModel: Codable, Equatable {
+    let id: Int?
+    let main, icon: String?
+}
+
+struct SysModel: Codable, Equatable {
+    let country: String?
+}
+
+enum WidgetSize: CGFloat {
+    case iPhoneSmall = 24.0
+    case iPhoneMedium = 26.0
+    case iPhoneLarge = 32.0
+}
+
+struct WidgetModel: Equatable {
+    var size: WidgetSize
+    var weatherIcon: String?
+    var location: String?
+    
+    
+    static var mock: [Self] {
+        [
+            .init(size: .iPhoneSmall),
+            .init(size: .iPhoneMedium),
+            .init(size: .iPhoneLarge)
+        ]
+    }
+}

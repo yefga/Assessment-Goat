@@ -29,30 +29,43 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
-/// 
-import UIKit
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+import WidgetKit
+import SwiftUI
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+struct Goat_Weather_Widget: Widget {
+    let kind: String = "Goat_Weather_Widget"
+
+    var body: some WidgetConfiguration {
+        StaticConfiguration(kind: kind,
+                            provider: WidgetProvider()) { entry in
+            if #available(iOS 17.0, *) {
+                Goat_Weather_WidgetEntryView(entry: entry)
+                    .containerBackground(.fill.tertiary, for: .widget)
+            } else {
+                Goat_Weather_WidgetEntryView(entry: entry)
+            }
+        }
+        .configurationDisplayName("Forecast")
+        .description("See the current weather conditions for a location")
+        .contentMarginsDisabledIfAvailable()
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
 }
 
+extension WidgetConfiguration {
+    func contentMarginsDisabledIfAvailable() -> some WidgetConfiguration {
+        if #available(iOSApplicationExtension 17.0, *) {
+            return self.contentMarginsDisabled()
+        } else {
+            return self
+        }
+    }
+}
+
+extension Date {
+    static func readableCurrentDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy: HH:mm"
+        return dateFormatter.string(from: Date())
+    }
+}

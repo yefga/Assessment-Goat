@@ -4,6 +4,8 @@
 <dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
+		<key>AppGroupIdentifier</key>
+		<string>group.YG25GXN392.com.yefga.GoatWeather</string>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 		<key>UISceneConfigurations</key>
@@ -19,15 +21,7 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>We need access to your photo library to allow you to change the widget background. Select a photo from your library to personalize your widget&apos;s appearance.</string>
-	<key>NSLocationUsageDescription</key>
-	<string>We require your location to provide personalized backgrounds based on the current weather. Granting access will allow us to enhance your experience by dynamically adjusting the widget background to match the weather conditions in your area.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We require your location to provide personalized backgrounds based on the current weather. Granting access will allow us to enhance your experience by dynamically adjusting the widget background to match the weather conditions in your area.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We require your location to provide personalized backgrounds based on the current weather. Granting access will allow us to enhance your experience by dynamically adjusting the widget background to match the weather conditions in your area.</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We require your location to provide personalized backgrounds based on the current weather. Granting access will allow us to enhance your experience by dynamically adjusting the widget background to match the weather conditions in your area.</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 </dict>
 </plist>

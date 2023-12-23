@@ -29,30 +29,51 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
-/// 
-import UIKit
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+import Foundation
+
+public extension Error {
+    var asErrorNetworkService: NetworkError {
+        self as? NetworkError ?? .Unknown
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    
+    var asErrorFileManager: DatabaseFileManagerError {
+        self as? DatabaseFileManagerError ?? .unknown
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
 }
 
+public enum NetworkError: Error {
+    case ServerError
+    case BadRequest(String)
+    case URLFailure
+    case Decoding(Error)
+    case Offline
+    case Custom(message: String, code: Int)
+    case Unknown
+    
+}
+
+extension NetworkError: LocalizedError {
+    /**
+         Returns a localized description of the error, depending on the case.
+         */
+    public var errorDescription: String? {
+        switch self {
+        case .Unknown:
+            return "An unknown error occurred."
+        case let .Custom(message, status):
+            return "\(status), \(message)"
+        case .BadRequest(let parameters): // 400
+            return "Request is invalid. \(parameters)"
+        case .ServerError: // 500
+            return "Server encountered a problem.\nPlease try again in a moment!"
+        case .Offline: // 1009
+            return "Your Internet connection is offline.\nPlease check your network status."
+        case .URLFailure:
+            return "URL not valid"
+        case .Decoding(let error):
+            return "Failed to Decoding \(error)"
+        }
+    }
+}

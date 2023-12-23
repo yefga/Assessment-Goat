@@ -31,45 +31,36 @@
 /// THE SOFTWARE.
 
 import UIKit
-
-enum WidgetSize {
-    case iPhoneSmall
-    case iPhoneMedium
-    case iPhoneLarge
-}
-
-struct WidgetModel: Equatable {
-    var size: WidgetSize?
-    var imageURL: URL?
-    var location: String?
-}
+import Combine
 
 class WidgetBackgroundVC: UIViewController {
+   
+    let viewModel: WidgetBackgroundVMProtocol
     
+    init?(coder: NSCoder, viewModel: WidgetBackgroundVMProtocol) {
+        self.viewModel = viewModel
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     @IBOutlet weak var cardCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var changeButton: UIButton!
-    private let widgets: [WidgetModel] = [
-        .init(
-            size: .iPhoneSmall,
-            imageURL: nil,
-            location: "Semarang"
-        ),
-        .init(
-            size: .iPhoneMedium,
-            imageURL: nil,
-            location: "Semarang"
-        ),
-        .init(
-            size: .iPhoneLarge,
-            imageURL: nil,
-            location: "Semarang"
-        )
-    ]
+        
+    private var cancelBag = Set<AnyCancellable>()
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.fetchInitial()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        updateUI()
     }
     
     func setupUI() {
@@ -78,15 +69,21 @@ class WidgetBackgroundVC: UIViewController {
         cardCollectionView?.isPagingEnabled = true
         cardCollectionView.delegate = self
         cardCollectionView.dataSource = self
-        cardCollectionView.register(WidgetCollectionViewCell.self,
-                                    forCellWithReuseIdentifier: WidgetCollectionViewCell.reuseIdentifier)
-        
+        cardCollectionView.register(WidgetCollectionSmallCell.self,
+                                    forCellWithReuseIdentifier: WidgetCollectionSmallCell.reuseIdentifier)
+
+        cardCollectionView.register(WidgetCollectionMediumCell.self,
+                                    forCellWithReuseIdentifier: WidgetCollectionMediumCell.reuseIdentifier)
+
+        cardCollectionView.register(WidgetCollectionLargeCell.self,
+                                    forCellWithReuseIdentifier: WidgetCollectionLargeCell.reuseIdentifier)
+
         let layout = CustomCollectionViewLayout()
         layout.scrollDirection = .horizontal
         layout.animator = LinearCardAttributesAnimator()
         cardCollectionView.collectionViewLayout = layout
         
-        pageControl.numberOfPages = widgets.count
+        pageControl.numberOfPages = viewModel.viewWidgets.value.count
         changeButton.titleLabel?.textColor = .white
         changeButton.titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)
         changeButton.setTitle("  Change Background", for: .normal)
@@ -95,17 +92,40 @@ class WidgetBackgroundVC: UIViewController {
         changeButton.tintColor = .white
         changeButton.clipsToBounds = true
         changeButton.layer.cornerRadius = 8
-        
-        DispatchQueue.main.async {
-            self.cardCollectionView.reloadData()
-        }
+    }
+    
+    func updateUI() {
+        viewModel.viewWidgets
+            .receive(on: DispatchQueue.main)
+            .map(\.count)
+            .sink { [weak pageControl] value in
+                pageControl?.numberOfPages = value
+            }.store(in: &cancelBag)
+
+        viewModel.viewLocation
+            .combineLatest(viewModel.viewWeatherIconURL)
+            .combineLatest(viewModel.viewBackground)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                DispatchQueue.main.async {
+                    self?.cardCollectionView.reloadData()
+                }
+            }.store(in: &cancelBag)
     }
     
     @IBAction func changeBackground(
         _ sender: UIButton
     ) {
-        
-        
+        viewModel.requestPhotoLibrary { [weak self] status in
+            if status {
+                DispatchQueue.main.async {
+                    let imageController = UIImagePickerController()
+                    imageController.delegate = self
+                    imageController.modalPresentationStyle = .fullScreen
+                    self?.present(imageController, animated: true)
+                }
+            }
+        }
     }
 }
 
@@ -122,18 +142,36 @@ extension WidgetBackgroundVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, 
                         numberOfItemsInSection section: Int) -> Int {
-        widgets.count
+        viewModel.viewWidgets.value.count
     }
     
     func collectionView(_ collectionView: UICollectionView, 
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: WidgetCollectionViewCell.reuseIdentifier,
-            for: indexPath
-        ) as? WidgetCollectionViewCell else {
-            return UICollectionViewCell()
+        
+        switch viewModel.viewWidgets.value[indexPath.item] {
+        case .iPhoneLarge:
+            return makeCell(WidgetCollectionLargeCell.self, collectionView: collectionView, indexPath: indexPath)
+        case .iPhoneMedium:
+            return makeCell(WidgetCollectionMediumCell.self, collectionView: collectionView, indexPath: indexPath)
+        case .iPhoneSmall:
+            return makeCell(WidgetCollectionSmallCell.self, collectionView: collectionView, indexPath: indexPath)
         }
-        cell.widgets = widgets[indexPath.item]
+    }
+    
+    func makeCell<T: WidgetCollectionViewCell>(_ cellType: T.Type, collectionView: UICollectionView, indexPath: IndexPath) -> WidgetCollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: cellType.reuseIdentifier,
+            for: indexPath
+        ) as? T else {
+            return WidgetCollectionViewCell()
+        }
+        cell.updateData(viewModel.viewWidgets.value[indexPath.item],
+                        location: viewModel.viewLocation.value ?? "",
+                        weatherIcon: viewModel.viewWeatherIconURL.value ?? "")
+        if let data = viewModel.viewBackground.value {
+            cell.image = UIImage(contentsOfFile: data.path)
+        }
+        
         return cell
     }
 }
@@ -164,7 +202,7 @@ extension WidgetBackgroundVC: UICollectionViewDelegateFlowLayout {
     
 }
 
-extension WidgetBackgroundVC: UIImagePickerControllerDelegate {
+extension WidgetBackgroundVC: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true)
     }
@@ -173,6 +211,12 @@ extension WidgetBackgroundVC: UIImagePickerControllerDelegate {
         _ picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [String : Any]
     ) {
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage,
+           let data = UIImagePNGRepresentation(selectedImage) {
+            viewModel.changeBackground(data)
+        }
         
+        // Dismiss the image picker
+        picker.dismiss(animated: true)
     }
 }

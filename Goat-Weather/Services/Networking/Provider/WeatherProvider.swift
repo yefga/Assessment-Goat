@@ -29,30 +29,39 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
-/// 
-import UIKit
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
-    }
+import Foundation
 
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
+enum WeatherProvider {
+    case fetchWeather(latitude: Double, longitude: Double)
 }
 
+extension WeatherProvider: Request {
+    var path: String {
+        switch self {
+        case .fetchWeather:
+            return "/data/2.5/weather"
+        }
+    }
+    
+    var host: String {
+        return "api.openweathermap.org"
+    }
+    
+    var parameters: [String : Any] {
+        switch self {
+        case .fetchWeather(let latitude, let longitude):
+            return [
+                "lat": latitude,
+                "lon": longitude,
+                "appid": "86038bc72ca728576da04bea3c740be6"
+            ]
+        }
+    }
+    
+    var method: HTTPMethod {
+        return .get
+    }
+    
+}
