@@ -74,7 +74,9 @@ Feel free to explore and build upon this Weather Widget App as you continue your
 ## Preview
 
 <details>
-  <summary>Goat Weather on iOS 17</summary>
-  ![app](./preview.gif)
+     
+<summary>iPhone SE 3, iOS 17</summary>
+
+![iOS](./preview.gif)
 
 </details>
