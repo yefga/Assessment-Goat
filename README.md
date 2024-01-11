@@ -69,3 +69,12 @@ To start the project, simply open the file Goat-Weather.xcodeproj.
 To create a new feature, start by creating a new folder with the name of your new feature inside the Goat-Weather folder. This helps maintain a clean and organized project structure.
 
 Feel free to explore and build upon this Weather Widget App as you continue your journey in iOS development!
+
+
+## Preview
+
+<details>
+  <summary>Goat Weather on iOS 17</summary>
+  ![app](./preview.gif)
+
+</details>
