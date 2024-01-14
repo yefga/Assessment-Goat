@@ -1,4 +1,4 @@
-# Goat Weather
+# Goat Weather (✅)
 ### Overview
 Welcome to the Goat Weather App! This iOS application serves as a demonstration for implementing a simple weather widget and serves as a coaching tool for junior iOS engineers. The app showcases various features, including displaying weather information using the OpenWeatherMap API, allowing users to set their own images from their gallery, and presenting the current weather in a widget.
 
