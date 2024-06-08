@@ -55,7 +55,7 @@ extension WeatherProvider: Request {
             return [
                 "lat": latitude,
                 "lon": longitude,
-                "appid": "86038bc72ca728576da04bea3c740be6"
+                "appid": "YOUR_APP_ID_FROM_OPENWEATHERMAP"
             ]
         }
     }
